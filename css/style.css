@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i);
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Style the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the button that triggers the dropdown */
+.dropbtn {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.dropdown_content a:hover {
+  background-color: blue;
+}
+
+/* Show the dropdown menu when the button is hovered over */
+.dropdown:hover .dropdown_content {
+  display: block;
+}

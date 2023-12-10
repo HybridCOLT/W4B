@@ -1,36 +1,52 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i);
-
 body {
   font-family: 'PT Sans', sans-serif;
+  margin: 0;
 }
 
-/* Style the dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.header_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns: auto for logo and auto for dropdown */
+  background-color: #0084FF;
+  padding: 0px;
+  /* Adjust padding as needed */
+  align-items: center;
+  /* Center items vertically */
 }
 
-/* Style the button that triggers the dropdown */
-.dropbtn {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid black;
-  border-radius: 10px;
+.logo img {
+  width: 250px;
+  justify-self: start;
+}
+
+/* Style the container to position it relative to the screen */
+.dropdown-container {
+  justify-self: end;
+  padding-right: 50px;
+}
+
+/* Style the button */
+.dropdown-btn {
+  background-color: transparent;
+  color: white;
+  padding-bottom: 25px;
+  font-size: 125px;
+  border: none;
   cursor: pointer;
 }
 
 /* Style the dropdown content (hidden by default) */
-.dropdown_content {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 /* Style the dropdown links */
-.dropdown_content a {
+.dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -38,11 +54,11 @@ body {
 }
 
 /* Change color on hover */
-.dropdown_content a:hover {
-  background-color: blue;
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu when the button is hovered over */
-.dropdown:hover .dropdown_content {
+/* Show the dropdown content when the dropdown button is hovered over */
+.dropdown-container:hover .dropdown-content {
   display: block;
 }

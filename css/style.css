@@ -3,6 +3,8 @@ body {
   margin: 0;
 }
 
+/* Header */
+
 .header_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -19,13 +21,11 @@ body {
   justify-self: start;
 }
 
-/* Style the container to position it relative to the screen */
 .dropdown-container {
   justify-self: end;
   padding-right: 50px;
 }
 
-/* Style the button */
 .dropdown-btn {
   background-color: transparent;
   color: white;
@@ -35,7 +35,6 @@ body {
   cursor: pointer;
 }
 
-/* Style the dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -45,7 +44,6 @@ body {
   z-index: 1;
 }
 
-/* Style the dropdown links */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -53,12 +51,19 @@ body {
   display: block;
 }
 
-/* Change color on hover */
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 
-/* Show the dropdown content when the dropdown button is hovered over */
 .dropdown-container:hover .dropdown-content {
   display: block;
+}
+
+/* Five Card Layout - Main */
+
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: center;
 }

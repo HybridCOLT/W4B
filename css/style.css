@@ -1,6 +1,5 @@
 body {
   font-family: 'PT Sans', sans-serif;
-  margin: 0;
 }
 
 /* Header */
@@ -62,8 +61,31 @@ body {
 /* Five Card Layout - Main */
 
 .card_container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card_container:first-child {
+  background-color: red;
+  width: 2fr;
+}
+
+.card {
+  background-color: blue;
+}
+
+#first {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  @media screen and (max-width: 768px) {
+    grid-column-start: 0;
+    grid-column-end: 1;
+  }
+
 }

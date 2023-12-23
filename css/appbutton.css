@@ -1,0 +1,157 @@
+body {
+  margin: 0px;
+  padding:0px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Grid Container */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+/* Card One Styles */
+.card1 {
+  grid-column: span 2; 
+  grid-row: span 1; 
+  background-color: #B8DDFF;
+}
+.card1 .title {
+  font-weight: bolder;
+  color: #0084FF;
+  font-size: 2em;
+  justify-self: start;
+}
+.card1 .subtitle {
+  color: #0084FF;
+}
+
+#app_store_button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 768px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #0084FF;
+  border-radius: 10px;
+  background-color: #0084FF;
+  color: white;
+}
+
+#applelogo {
+  width: 33%;
+  height: 100%;
+  justify-self: end;
+  padding-right: 10px;
+}
+
+#bluephone {
+  width: 100%;
+  height: 100%;
+  align-self: end;
+  justify-self: center;
+}
+
+/* Card Two Styles */
+.card2 {
+  background-color: #CAF0DB;
+}
+
+.card2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card2 .title {
+  font-weight: bold;
+  color: #54C788;
+}
+
+.card2 .subtitle {
+  color: #54C788;
+}
+
+/* Card Three Styles */
+.card3 {
+  background-color: #FFD2D2;
+}
+
+.card3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card3 .title {
+  font-weight: bold;
+  color: #FF8A8A;
+}
+
+.card3 .subtitle {
+  color: #FF8A8A;
+}
+
+/* Card Four Styles */
+.card4 {
+  background-color: #FFE7C4;
+}
+
+.card4 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card4 .title {
+  font-weight: bold;
+  color: #FFC166;
+}
+
+.card4 .subtitle {
+  color: #FFC166;
+}
+
+/* Card Five Styles */
+.card5 {
+  background-color: #D5D4F5;
+}
+
+.card5 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card5 .title {
+  font-weight: bold;
+  color: #9693E6;
+}
+
+.card5 .subtitle {
+  color: #9693E6;
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+  .card_container {
+      grid-template-columns: 1fr;
+  }
+
+  .card1 {
+      grid-column: span 1;
+  }
+
+  .card2, .card3, .card4, .card5 {
+      grid-column: span 1;
+  }
+}

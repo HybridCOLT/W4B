@@ -1,52 +1,60 @@
 body {
   margin: 0px;
-  padding:0px;
+  padding: 0px;
   font-family: 'PT Sans', sans-serif;
 }
 
-/* Grid Container */
-.card_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  padding: 20px;
+/* Grid Container (Tablet and Desktop devices*/
+@media only screen and (min-width: 768px) {
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
+
 .card {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  border-radius: 10px;
-  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
 }
-/* Card One Styles */
-.card1 {
-  grid-column: span 2; 
-  grid-row: span 1; 
-  background-color: #B8DDFF;
+
+@media only screen and .card1 {}
+
+@media only screen and (min-width: 768px) {
+  .card1 {
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: #B8DDFF;
+  }
 }
+
 .card1 .title {
   font-weight: bolder;
+  font-family: ;
   color: #0084FF;
   font-size: 2em;
   justify-self: start;
 }
+
 .card1 .subtitle {
   color: #0084FF;
+  white-space: pre-line;
+  text-align: left;
 }
 
 #app_store_button {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 768px;
-  margin: 20px auto;
+  margin: 20px 200px;
   padding: 20px;
   border: 2px solid #0084FF;
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: #0084FF;
   color: white;
 }
@@ -59,7 +67,7 @@ body {
 }
 
 #bluephone {
-  width: 100%;
+  width: 70%;
   height: 100%;
   align-self: end;
   justify-self: center;
@@ -144,14 +152,17 @@ body {
 /* Media Query for Responsive Layout */
 @media (max-width: 768px) {
   .card_container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .card1 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
 
-  .card2, .card3, .card4, .card5 {
-      grid-column: span 1;
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    grid-column: span 1;
   }
 }
